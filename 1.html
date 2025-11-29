@@ -1,0 +1,98 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            height: 100px;
+            width: 100px;
+            background-color:white;
+            text-align: center;
+            text-decoration: dotted;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">box</div>
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Skill Share</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Skill Sharing Portal</h1>
+        <nav>
+            <a href="#skills">Find Tutors</a>
+            <a href="#session">Book Session</a>
+            <a href="#feedback">Feedback</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="skills">
+            <h2>Available Tutors</h2>
+            <div class="tutor-list">
+                <!-- Add sample tutors -->
+                <div class="card">
+                    <h3>Priya (Maths)</h3>
+                    <p>Available: Mon-Fri</p>
+                    <button onclick="bookSession('Priya')">Book Session</button>
+                </div>
+                <div class="card">
+                    <h3>Arjun (Coding)</h3>
+                    <p>Available: Sat-Sun</p>
+                    <button onclick="bookSession('Arjun')">Book Session</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="session">
+            <h2>Book a Session</h2>
+            <form onsubmit="return handleBooking(event)">
+                <label>Name: <input type="text" id="studentName" required></label>
+                <label>Choose Tutor:
+                    <select id="tutorSelect">
+                        <option value="Priya">Priya (Maths)</option>
+                        <option value="Arjun">Arjun (Coding)</option>
+                    </select>
+                </label>
+                <button type="submit">Book</button>
+            </form>
+        </section>
+
+<section id="feedback">
+    <h2>Give Feedback</h2>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Message: <textarea name="message" required></textarea></label><br>
+        <label>Rating:
+            <select name="rating" required>
+                <option value="" disabled selected>Select rating</option>
+                <option value="5">⭐️⭐️⭐️⭐️⭐️ Excellent</option>
+                <option value="4">⭐️⭐️⭐️⭐️ Good</option>
+                <option value="3">⭐️⭐️⭐️ Average</option>
+                <option value="2">⭐️⭐️ Poor</option>
+                <option value="1">⭐️ Very Poor</option>
+            </select>
+        </label><br>
+        <input type="submit" value="Send Feedback">
+    </form>
+</section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Student Skill Share. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
