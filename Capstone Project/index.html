@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShopEase —  E-commerce UI </title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner container">
+      <div class="brand">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+          aria-label="Open navigation">
+          ☰
+        </button>
+        <img
+          src="https://images.crunchbase.com/image/upload/c_pad,h_160,w_160,f_auto,b_white,q_auto:eco,dpr_2/navshf25nyuuddqxbpss?ik-sanitizeSvg=true"
+          alt="ShopEase logo" class="logo">
+        <span class="brand-name">ShopEase</span>
+      </div>
+
+      <nav id="primary-nav" class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#testimonial-card">testimonial-card</a></li>
+
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn ghost" aria-label="Search">🔎</button>
+        <a class="btn cart" href="#" aria-label="Cart">🧺 <span class="cart-count">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <p class="eyebrow">New arrival</p>
+        <h1 id="hero-title">Style that fits your student life</h1>
+        <p class="lead">Minimal, affordable, and designed for daily comfort. A student project UI with modern touches.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#products">Shop Now</a>
+          <a class="btn ghost" href="#contact">Get in Touch</a>
+        </div>
+        <div class="hero-features">
+          <div><strong>Fast delivery within 3–5 days</strong></span></div>
+          <div><strong>Secure payments card & UPI</strong></span></div>
+          <div><strong>Student discount use code SHADAVSIR10</strong></span></div>
+        </div>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <div class="hero-card">
+          <img src="https://s.globalsources.com/IMAGES/skc/20240516072133213361365" alt="Showcase product" />
+          <div class="badge ribbon">-20%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP (filters + products) -->
+    <section class="shop container">
+      <aside class="filters" aria-labelledby="filter-heading">
+        <h2 id="filter-heading">Filters</h2>
+
+        <div class="filter-block">
+          <label for="cat-select">Category</label>
+          <select id="cat-select" name="category">
+            <option>All</option>
+            <option>Clothing</option>
+            <option>Accessories</option>
+            <option>Electronics</option>
+          </select>
+        </div>
+
+        <div class="filter-block">
+          <label for="price-range">Max price: <span id="priceLabel">20,000</span></label>
+          <input id="price-range" type="range" min="5" max="500" value="120" />
+        </div>
+
+        <div class="filter-block">
+          <label>Brand</label>
+          <ul class="brand-list">
+            <li><label><input type="checkbox"> Brand A</label></li>
+            <li><label><input type="checkbox"> Brand B</label></li>
+            <li><label><input type="checkbox"> Brand C</label></li>
+          </ul>
+        </div>
+
+        <div class="filter-block">
+          <button class="btn primary fullwidth">Apply (visual)</button>
+        </div>
+      </aside>
+
+      <section class="products" id="products" aria-labelledby="products-heading">
+        <h2 id="products-heading" class="sr-only">Products</h2>
+
+        <div class="product-grid">
+          <!-- Example product card -->
+          <article class="product-card" tabindex="0">
+            <div class="media">
+              <img src="https://image.hm.com/assets/hm/b7/59/b759550743fa2f994aa190477fa276a70aac3158.jpg?imwidth=1260"
+                alt="Basic White Tee">
+              <div class="card-actions-overlay">
+                <button class="icon-btn" aria-label="Quick view">👁️</button>
+                <button class="icon-btn" aria-label="Add to wishlist">♡</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="product-title">Basic White Tee</h3>
+              <p class="short-desc">Comfort cotton t-shirt with relaxed fit.</p>
+              <div class="card-meta">
+                <span class="price">3,000</span>
+                <span class="rating" aria-hidden="true">⭐️⭐️⭐️⭐️☆</span>
+              </div>
+              <div class="card-cta">
+                <button class="btn small ghost">View</button>
+                <button class="btn small primary">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- duplicate / edit product cards to create 8 items -->
+          <article class="product-card" tabindex="0">
+            <div class="media"><img
+                src="https://redflame.in/cdn/shop/products/DFJT-29163-B_1.jpg?v=1641464933&width=1260"
+                alt="Denim Jacket"></div>
+            <div class="card-body">
+              <h3 class="product-title">Denim Jacket</h3>
+              <p class="short-desc">Classic denim jacket, unisex style.</p>
+              <div class="card-meta"><span class="price">4,000</span><span class="rating">⭐️⭐️⭐️⭐️⭐️</span></div>
+              <div class="card-cta"><button class="btn small ghost">View</button><button
+                  class="btn small primary">Add</button></div>
+            </div>
+          </article>
+
+          <article class="product-card" tabindex="0">
+            <div class="media"><img
+                src="https://images.ctfassets.net/javen7msabdh/7krBslEXCQLoEvJdhiWJor/b4f8a2c61bec725fd732bfb7b2109987/1-major-v-cream-front-mobile.jpg?w=2048&fm=avif&q=100"
+                alt="Wireless Headphones"></div>
+            <div class="card-body">
+              <h3 class="product-title">Wireless Headphones</h3>
+              <p class="short-desc">Active noise cancellation & long battery.</p>
+              <div class="card-meta"><span class="price">8,000</span><span class="rating">⭐️⭐️⭐️⭐️☆</span></div>
+              <div class="card-cta"><button class="btn small ghost">View</button><button
+                  class="btn small primary">Add</button></div>
+            </div>
+          </article>
+
+          <article class="product-card" tabindex="0">
+            <div class="media"><img
+                src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-AI809945251002_lifestyle?$rl_4x5_pdp$"
+                alt="Everyday Sneakers"></div>
+            <div class="card-body">
+              <h3 class="product-title">Everyday Sneakers</h3>
+              <p class="short-desc">Comfortable and stylish for casual wear.</p>
+              <div class="card-meta"><span class="price">4,000</span><span class="rating">⭐️⭐️⭐️⭐️☆</span></div>
+              <div class="card-cta"><button class="btn small ghost">View</button><button
+                  class="btn small primary">Add</button></div>
+            </div>
+          </article>
+
+          <article class="product-card" tabindex="0">
+            <div class="media"><img src="https://rangrays.com/cdn/shop/files/azureedge001.png?v=1753767703&width=800"
+                alt="Classic Sunglasses"></div>
+            <div class="card-body">
+              <h3 class="product-title">Classic Sunglasses</h3>
+              <p class="short-desc">UV protection with a modern shape.</p>
+              <div class="card-meta"><span class="price">3,000</span><span class="rating">⭐️⭐️⭐️⭐️☆</span></div>
+              <div class="card-cta"><button class="btn small ghost">View</button><button
+                  class="btn small primary">Add</button></div>
+            </div>
+          </article>
+
+          <article class="product-card" tabindex="0">
+            <div class="media"><img
+                src="https://www.urbanmonkey.com/cdn/shop/files/city-backpack-neon-04-992023.jpg?v=1734152240"
+                alt="City Backpack"></div>
+            <div class="card-body">
+              <h3 class="product-title">City Backpack</h3>
+              <p class="short-desc">Laptop sleeve and lightweight design.</p>
+              <div class="card-meta"><span class="price">7,000</span><span class="rating">⭐️⭐️⭐️⭐️☆</span></div>
+              <div class="card-cta"><button class="btn small ghost">View</button><button
+                  class="btn small primary">Add</button></div>
+            </div>
+          </article>
+
+          <article class="product-card" tabindex="0">
+            <div class="media"><img
+                src="https://cdn1.ethoswatches.com/media/catalog/product/cache/6e5de5bc3d185d8179cdc7258143f41a/o/m/omega-seamaster-220-55-30-20-60-001-large.jpg"
+                alt="Minimal Watch"></div>
+            <div class="card-body">
+              <h3 class="product-title">Minimal Watch</h3>
+              <p class="short-desc">Simple, elegant timepiece.</p>
+              <div class="card-meta"><span class="price">20,000</span><span class="rating">⭐️⭐️⭐️⭐️⭐️</span></div>
+              <div class="card-cta"><button class="btn small ghost">View</button><button
+                  class="btn small primary">Add</button></div>
+            </div>
+          </article>
+
+          <article class="product-card" tabindex="0">
+            <div class="media"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSutd7ySDh_9Z3LXeKxj8N7ENztmoLsxxe45w&s"
+                alt="Ceramic Mug"></div>
+            <div class="card-body">
+              <h3 class="product-title">Ceramic Mug</h3>
+              <p class="short-desc">Microwave-safe, dishwasher-friendly.</p>
+              <div class="card-meta"><span class="price">1,000</span><span class="rating">⭐️⭐️⭐️⭐️☆</span></div>
+              <div class="card-cta"><button class="btn small ghost">View</button><button
+                  class="btn small primary">Add</button></div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </section>
+
+    <!-- Product detail -->
+    <section class="product-detail container" aria-labelledby="detail-title">
+      <h2 id="detail-title">Product Detail </h2>
+      <div class="detail-grid">
+        <div class="detail-image">
+          <img
+            src="https://images.ctfassets.net/javen7msabdh/7krBslEXCQLoEvJdhiWJor/b4f8a2c61bec725fd732bfb7b2109987/1-major-v-cream-front-mobile.jpg?w=2048&fm=avif&q=100"
+            alt="Wireless Headphones large">
+        </div>
+        <div class="detail-info">
+          <h3>Wireless Headphones</h3>
+          <p class="price">8,000</p>
+          <p class="desc">High-quality sound with active noise cancellation and 30-hour battery life. Great for students
+            and commuters.</p>
+          <ul class="specs">
+            <li>Bluetooth 5.0</li>
+            <li>30 hours playtime</li>
+            <li>Fast charge (10 min = 3 hours)</li>
+          </ul>
+          <div class="detail-actions">
+            <button class="btn primary">Add to Cart</button>
+            <button class="btn ghost">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="testimonial-card">
+    <div class="container">
+      <h2 class="section-title">What Our Customers Say</h2>
+
+      <div class="testimonial-grid">
+
+
+        <article class="testimonial-card">
+          <img
+            src="https://thumbs.dreamstime.com/b/gentleman-wearing-suit-tie-20901184.jpg"
+            alt="Chakshu Madan" class="testimonial-avatar">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            “Shop ShopEase makes ordering food so easy and quick! The delivery is always on time and the cloths are super unique and fashionable.”
+          </p>
+          <p class="testimonial-name">Mehul Srivastva</p>
+        </article>
+
+
+        <article class="testimonial-card">
+          <img
+            src="https://media.istockphoto.com/id/907865186/photo/handsome-man.jpg?s=612x612&w=0&k=20&c=6nIHksYpLZowAwCD1g0VOv7m_gpcoV9nKHC6WO91QNw="
+            alt="Somujeet B." class="testimonial-avatar">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            “Great selection of Cloths and accessiries and amazing offers. Highly recommend to all GENZS!”
+          </p>
+          <p class="testimonial-name">Arpit Patni</p>
+        </article>
+
+
+        <article class="testimonial-card">
+          <img
+            src="https://th.bing.com/th/id/OIP.M3QAPGWk-EgIjeeC7EU9RAHaFh?w=208&h=155&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            alt="Vikas" class="testimonial-avatar">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            “The app is super user-friendly and the customer support is fantastic. Loved this app!”
+          </p>
+          <p class="testimonial-name">Vikas</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact container" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Us</h2>
+      <form class="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can we help?"></textarea>
+        </div>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>&copy; <span id="year"></span> ShopEase — E-commerce Project</p>
+      </div>
+      <div class="footer-right">
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="There is no as such privacy about website">Privacy</a></li>
+            <li><a href="Dont have any terms and conditions">Terms</a></li>
+            <li><a href="https://www.linkedin.com/in/arpit-patni-4251282a4/">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
